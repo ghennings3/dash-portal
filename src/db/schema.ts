@@ -48,7 +48,7 @@ export const verification = pgTable("verification", {
 
 export const userConfigs = pgTable("user_configs", {
 	id: uuid("id").defaultRandom().primaryKey(),
-	userId: text("userId").notNull().references(() => user.id),
+	userId: text("userId").notNull().unique().references(() => user.id),
 	layout: jsonb("layout").notNull(),
 	createdAt: timestamp("createdAt").notNull().defaultNow(),
 	updatedAt: timestamp("updated_at").notNull().defaultNow()

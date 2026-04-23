@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const linkSchema = z.object({
+  id: z.string().min(1, "O ID é obrigatório"),
   name: z.string().min(1, "O nome do link é obrigatório"),
   url: z.string().url("A URL deve ser válida"),
   icon: z.string().optional(),
