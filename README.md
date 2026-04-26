@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 DashPortal: Seu Hub de Produtividade Blindado
 
-## Getting Started
+**DashPortal** é um dashboard minimalista e de alta performance projetado para ser a sua página inicial definitiva. Com uma estética Dark moderna e refinada, ele combina uma interface limpa com uma arquitetura robusta, garantindo que seus links e preferências estejam sempre à mão com carregamento instantâneo.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Diferenciais do Projeto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* **⚡ Performance Local-First:** Utiliza `localStorage` + Zustand para carregar seus dados instantaneamente. O portal abre primeiro e sincroniza depois, eliminando tempos de espera.
+* **🛡️ Blindagem de Dados:** Segurança em nível de linha (RLS) via Supabase, garantindo que seus dados sejam acessíveis apenas por você direto na camada do banco.
+* **🔄 Sincronização Híbrida:** Flexibilidade total. Use anonimamente no navegador ou faça login para manter seus dados sincronizados entre múltiplos dispositivos.
+* **🔍 Omnibox Inteligente:** Barra de pesquisa centralizada que alterna entre **Google**, **YouTube** e **GitHub** dinamicamente ao pressionar `Tab`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Funcionalidades Core
 
-## Learn More
+### 📂 Organização e Gestão
+* **Categorias Customizáveis:** Crie e gerencie grupos de sites (ex: Dev, Lazer, Finanças, Ferramentas).
+* **Gestão de Links:** Adicione e remova sites facilmente com busca automática de favicons.
+* **Filtros Rápidos:** Navegação por categorias para manter o grid limpo e focado.
 
-To learn more about Next.js, take a look at the following resources:
+### 🔑 Autenticação Multimodal (Better Auth)
+Acesso seguro e flexível através de múltiplos provedores:
+* **Social Login:** Conexão rápida via **GitHub** e **Google**.
+* **Tradicional:** Cadastro e login via **E-mail e Senha**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🎨 Personalização e UX
+* **Temas Dinâmicos:** Seletor de temas para adaptar a estética ao seu gosto (Dark, Cyberpunk, Minimalist).
+* **Design Moderno:** Interface polida utilizando a fonte **Inter**, focada em máxima legibilidade e uma experiência visual premium.
+* **Relógio de Alta Precisão:** Relógio centralizado com segundos e data por extenso.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🏗️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Framework:** [Next.js 15+](https://nextjs.org/) (App Router)
+* **Banco de Dados:** [Supabase](https://supabase.com/) (PostgreSQL)
+* **ORM:** [Drizzle ORM](https://orm.drizzle.team/)
+* **Autenticação:** [Better Auth](https://better-auth.com/)
+* **Estado:** [Zustand](https://docs.pmnd.rs/zustand/)
+* **Estilização:** [Tailwind CSS](https://tailwindcss.com/) + [Shadcn/UI](https://ui.shadcn.com/)
