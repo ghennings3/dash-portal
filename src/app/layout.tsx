@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -44,9 +45,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} font-sans antialiased`}>
-      <body className="bg-black text-white selection:bg-zinc-800">
-        {children}
+    <html lang="pt-BR" className={`${inter.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className="bg-zinc-950 text-white selection:bg-zinc-800">
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="dark"
+          enableSystem={false}
+          themes={["dark", "light", "sunset", "cyberpunk", "hacker", "dracula"]}
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

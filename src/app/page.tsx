@@ -4,6 +4,8 @@ import { Clock } from "@/components/Clock";
 import { SearchBox } from "@/components/SearchBox";
 import { CategoryFilters } from "@/components/CategoryFilters";
 import { SiteGrid } from "@/components/SiteGrid";
+import { AuthButton } from "@/components/AuthButton";
+import { SettingsButton } from "@/components/SettingsButton";
 import { useSyncLayout } from "@/hooks/useSyncLayout";
 
 export default function Home() {
@@ -12,6 +14,8 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center pt-20 pb-10">
+      <AuthButton />
+      <SettingsButton />
       <div className="w-full max-w-6xl flex flex-col items-center">
         {/* Top: Relógio */}
         <Clock />

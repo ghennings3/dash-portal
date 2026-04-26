@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Search, Code, Play, Globe } from "lucide-react";
+import { Search, Play, Globe } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 type Provider = {
   name: string;
@@ -27,7 +28,7 @@ const providers: Provider[] = [
     name: "GitHub",
     url: "https://github.com/search?q=",
     placeholder: "Pesquisar no GitHub...",
-    icon: <Code className="w-4 h-4" />,
+    icon: <FaGithub className="w-4 h-4" />,
   },
 ];
 
