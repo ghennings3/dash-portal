@@ -81,7 +81,7 @@ export function SearchBox() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Pesquisar ou filtrar sites..."
+          placeholder="Pesquisar..."
           className="w-full h-14 pl-14 pr-14 bg-zinc-900/30 border border-zinc-800/80 rounded-full outline-none focus:border-zinc-600 focus:bg-zinc-900/60 transition-all text-base placeholder:text-zinc-500 text-zinc-200 shadow-inner"
           autoFocus
         />
