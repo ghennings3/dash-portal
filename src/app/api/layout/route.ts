@@ -24,7 +24,6 @@ export async function GET(request: Request) {
 
     return NextResponse.json({ layout: config?.layout || [] });
   } catch (error) {
-    console.error("GET /api/layout error:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
@@ -65,7 +64,6 @@ export async function PATCH(request: Request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("PATCH /api/layout error:", error);
     return NextResponse.json({ error: "Invalid data or internal error" }, { status: 400 });
   }
 }
